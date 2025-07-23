@@ -2,7 +2,7 @@ import { CSSProperties, ReactNode } from "react";
 import clsx from "clsx";
 
 type BoundedProps = {
-  as?: "div" | "section" | "h3" | "h4" | "h5" | "h6";
+  as?: "div" | "section" | "nav";
   className?: string;
   style?: CSSProperties;
   children: ReactNode;
