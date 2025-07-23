@@ -31,8 +31,8 @@ export function InteractiveSkateboard({
       >
         <Suspense>
           <Scene
-            deckTextureURl={deckTextureURL}
-            wheelTextureURl={wheelTextureURL}
+            deckTextureURL={deckTextureURL}
+            wheelTextureURL={wheelTextureURL}
             truckColor={truckColor}
             boltColor={boltColor}
           />
@@ -42,7 +42,12 @@ export function InteractiveSkateboard({
   );
 }
 
-function Scene({ deckTextureURl, wheelTextureURl, boltColor, truckColor }) {
+function Scene({
+  deckTextureURL,
+  wheelTextureURL,
+  truckColor,
+  boltColor,
+}: Props) {
   const originRef = useRef<THREE.Group>(null);
   const containerRef = useRef<THREE.Group>(null);
 
@@ -215,10 +220,10 @@ function Scene({ deckTextureURl, wheelTextureURl, boltColor, truckColor }) {
         <group ref={containerRef} position={[-0.25, 0, -0.635]}>
           <group position={[0, -0.086, 0.635]}>
             <SkateBoard
-              wheelTextureURLs={[wheelTextureURl]}
-              wheelTextureURL={wheelTextureURl}
-              deckTextureURLs={[deckTextureURl]}
-              deckTextureURL={deckTextureURl}
+              wheelTextureURLs={[wheelTextureURL]}
+              wheelTextureURL={wheelTextureURL}
+              deckTextureURLs={[deckTextureURL]}
+              deckTextureURL={deckTextureURL}
               truckColor={truckColor}
               boltColor={boltColor}
               constantWheelSpin
