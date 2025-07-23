@@ -9,7 +9,9 @@ import { SlideIn } from "@/components/SlideIn";
 
 export type ThemeGridProps = SliceComponentProps<Content.ThemeGridSlice>;
 
-const ThemeGrid = async ({ slice }: ThemeGridProps): Promise<Element> => {
+const ThemeGrid = async ({
+  slice,
+}: ThemeGridProps): Promise<React.JSX.Element> => {
   const client = createClient();
   const skaters = await client.getAllByType("skater");
 
