@@ -1,8 +1,8 @@
 import { Content, isFilled } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
+import { FaStar } from "react-icons/fa6";
 
 import { createClient } from "@/prismicio";
-import { FaStar } from "react-icons/fa6";
 import { ButtonLink } from "@/components/ButtonLink";
 import { HorizontalLine, VerticalLine } from "@/components/Line";
 import clsx from "clsx";
@@ -41,8 +41,9 @@ export async function SkateBoardProduct({ id }: Props) {
   const dominantColor = isFilled.image(product.data.image)
     ? await getDominantColor(product.data.image.url)
     : undefined;
+
   return (
-    <div className="group relative mx-auto w-full max-w-72 px-8 pt-4">
+    <div className="group relative mx-auto w-full max-w-72 px-8 pt-4 ">
       <VerticalLine className={clsx(VERTICAL_LINE_CLASSES, "left-4")} />
       <VerticalLine className={clsx(VERTICAL_LINE_CLASSES, "right-4")} />
       <HorizontalLine className={HORIZONTAL_LINE_CLASSES} />
@@ -50,10 +51,10 @@ export async function SkateBoardProduct({ id }: Props) {
       <div className="flex items-center justify-between ~text-sm/2xl">
         <span>{price}</span>
         <span className="inline-flex items-center gap-1">
-          <FaStar className="text-yellow-400" /> 38
+          <FaStar className="text-yellow-400" /> 37
         </span>
       </div>
-      <div className="overflow-hidden -mb-1 py-4">
+      <div className="-mb-1 overflow-hidden py-4">
         <Scribble
           className="absolute inset-0 h-full w-full"
           color={dominantColor}
@@ -62,10 +63,11 @@ export async function SkateBoardProduct({ id }: Props) {
           alt=""
           field={product.data.image}
           width={150}
-          className="mx-auto w-[58%] origin-top transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-150"
+          className=" mx-auto w-[58%] origin-top transform-gpu transition-transform duration-500 ease-in-out group-hover:scale-150"
         />
       </div>
       <HorizontalLine className={HORIZONTAL_LINE_CLASSES} />
+
       <h3 className="my-2 text-center font-sans leading-tight ~text-lg/xl">
         {product.data.name}
       </h3>

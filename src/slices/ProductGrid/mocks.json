@@ -32,14 +32,67 @@
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
-								"skateboard",
+								"price",
 								{
-									"key": "4f6e9020-45a6-4445-97a1-57dc7c60bb3d",
+									"__TYPE__": "FieldContent",
+									"value": "help",
+									"type": "Text"
+								}
+							],
+							[
+								"image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
+										"width": 4000,
+										"height": 4000
+									},
+									"url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
+									"width": 4000,
+									"height": 4000,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "tree",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"customizer_link",
+								{
+									"key": "ef4276f1-8909-47ac-b153-64d92a75aa51",
 									"__TYPE__": "LinkContent",
 									"value": {
 										"__TYPE__": "ExternalLink",
-										"url": "http://google.com",
-										"text": "arrow"
+										"url": "https://slicemachine.dev",
+										"text": "capital"
+									}
+								}
+							],
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "rise",
+									"type": "Text"
+								}
+							],
+							[
+								"skateboard",
+								{
+									"__TYPE__": "LinkContent",
+									"key": "2ca41f93-6975-4b9a-90af-a208d7d4295f",
+									"value": {
+										"__TYPE__": "DocumentLink",
+										"id": "mock_document_id"
 									}
 								}
 							]

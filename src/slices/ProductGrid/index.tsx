@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Content, ContentRelationshipField, isFilled } from "@prismicio/client";
+import { Content, isFilled } from "@prismicio/client";
 import {
   PrismicRichText,
   PrismicText,
@@ -38,10 +38,10 @@ const ProductGrid: FC<ProductGridProps> = ({ slice }) => {
       </div>
       <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
         {slice.primary.products.map(
-          ({ skateboard }, index) =>
-            isFilled.contentRelationship(
-              skateboard as ContentRelationshipField
-            ) && <SkateBoardProduct key={index} id={`${(index = 1)}`} />
+          ({ skateboard }) =>
+            isFilled.contentRelationship(skateboard) && (
+              <SkateBoardProduct key={skateboard.id} id={skateboard.id} />
+            )
         )}
       </div>
     </Bounded>

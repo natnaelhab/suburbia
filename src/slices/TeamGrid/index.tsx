@@ -3,9 +3,10 @@ import { PrismicText, SliceComponentProps } from "@prismicio/react";
 import { Bounded } from "@/components/Bounded";
 import { Heading } from "@/components/Heading";
 import { createClient } from "@/prismicio";
-import React from "react";
+
 import Skater from "./Skater";
 import { SlideIn } from "@/components/SlideIn";
+import React from "react";
 
 export type ThemeGridProps = SliceComponentProps<Content.ThemeGridSlice>;
 

@@ -648,19 +648,66 @@ export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
  */
 export interface ProductGridSliceDefaultPrimaryProductsItem {
   /**
-   * Skateboard field in *ProductGrid → Default → Primary → Products*
+   * Price field in *ProductGrid → Default → Primary → Products*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_grid.default.primary.products[].price
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  price: prismic.KeyTextField;
+
+  /**
+   * Name field in *ProductGrid → Default → Primary → Products*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_grid.default.primary.products[].name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Image field in *ProductGrid → Default → Primary → Products*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_grid.default.primary.products[].image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Customizer Link field in *ProductGrid → Default → Primary → Products*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: product_grid.default.primary.products[].skateboard
+   * - **API ID Path**: product_grid.default.primary.products[].customizer_link
    * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  skateboard: prismic.LinkField<
+  customizer_link: prismic.LinkField<
     string,
     string,
     unknown,
     prismic.FieldState,
     never
+  >;
+
+  /**
+   * Skateboard field in *ProductGrid → Default → Primary → Products*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_grid.default.primary.products[].skateboard
+   * - **Documentation**: https://prismic.io/docs/fields/content-relationship
+   */
+  skateboard: ContentRelationshipFieldWithData<
+    [
+      {
+        id: "skateboard";
+        fields: ["name", "image", "price", "customizer_link"];
+      },
+    ]
   >;
 }
 

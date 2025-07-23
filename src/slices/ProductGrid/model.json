@@ -36,15 +36,56 @@
             "label": "Products",
             "repeat": true,
             "fields": {
-              "skateboard": {
+              "price": {
+                "type": "Text",
+                "config": {
+                  "label": "Price",
+                  "placeholder": ""
+                }
+              },
+              "name": {
+                "type": "Text",
+                "config": {
+                  "label": "Name",
+                  "placeholder": ""
+                }
+              },
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "customizer_link": {
                 "type": "Link",
                 "config": {
-                  "label": "Skateboard",
+                  "label": "Customizer Link",
                   "placeholder": "",
                   "select": null,
                   "allowTargetBlank": true,
                   "allowText": true,
                   "repeat": false
+                }
+              },
+              "skateboard": {
+                "type": "Link",
+                "config": {
+                  "label": "Skateboard",
+                  "select": "document",
+                  "repeat": false,
+                  "customtypes": [
+                    {
+                      "id": "skateboard",
+                      "fields": [
+                        "name",
+                        "image",
+                        "price",
+                        "customizer_link"
+                      ]
+                    }
+                  ]
                 }
               }
             }
