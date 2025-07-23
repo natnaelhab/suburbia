@@ -4,12 +4,12 @@ import { Logo } from "@/components/Logo";
 import Link from "next/link";
 import React from "react";
 
-import { CustomizerControlsProvider } from "./Context";
 import { createClient } from "@/prismicio";
 import Preview from "./Preview";
 import { asImageSrc } from "@prismicio/client";
 import Controls from "./Controls";
 import Loading from "./Loading";
+import { CustomizerControlsProvider } from "./Context";
 
 type SearchParams = {
   wheel?: string;
